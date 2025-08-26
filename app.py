@@ -31,7 +31,7 @@ def main():
     single_sample = np.array(feature_list).reshape(1, -1)
 
     if st.button("Predict"):
-        loaded_model = load_model("xgb_model.pkl")
+        loaded_model = load_model("xgboost.pkl")
         if loaded_model is not None:
             prediction = loaded_model.predict(single_sample)
             st.success(f"Predicted S/D value: {prediction[0]:.4f}")
